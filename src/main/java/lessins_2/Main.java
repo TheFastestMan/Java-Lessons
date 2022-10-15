@@ -11,6 +11,8 @@ public class Main {
         enumMap.put(Animal.SPIDER,"Two");
         enumMap.put(Animal.SCORPION,"Three");
         enumMap.put(Animal.FISH,"Four");
+        enumMap.put(Animal.DOG,"Five");
+        enumMap.put(Animal.CAT,"Six");
 
         Set set = enumMap.entrySet();
 
