@@ -3,8 +3,21 @@ package lesson_3;
 import java.util.Objects;
 
 public class Animal {
-    int price;
-    String breed;
+    private int price;
+    private String breed;
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+    public int getPrice() {
+        return price;
+    }
+    public String getBreed() {
+        return breed;
+    }
 
     public Animal(int price, String breed) {
         this.price = price;
@@ -13,7 +26,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return price + breed ;
+        return price + breed;
     }
 
     @Override
