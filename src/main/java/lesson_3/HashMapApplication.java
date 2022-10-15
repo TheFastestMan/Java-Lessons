@@ -6,15 +6,12 @@ import java.util.Map;
 public class HashMapApplication {
     public static void main(String[] args) {
 
-        String[] people = new String[]{"Sean","Dave","Thomson","Joe"};
+             String[] people = new String[]{"Sean","Dave","Thomson","Joe"};
 
-        HashMap <String, Human> map = addHumanToMap(people);
-
-        for (Map.Entry<String, Human> pair: map.entrySet()) {
-            System.out.println(pair.getKey()+" - "+pair.getValue());
-        }
+        HashMap <String, Human> humans = createHumanMap(people);
+        humans.forEach((key, value) -> System.out.println(key + " - " + value)); //I have to think about it
     }
-    private static HashMap<String, Human> addHumanToMap(String[] people) {
+    private static HashMap<String, Human> createHumanMap (String[] people) {
         HashMap <String, Human> allHumans = new HashMap<>();
 
         for (String s:people) {

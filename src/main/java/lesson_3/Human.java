@@ -1,16 +1,23 @@
 package lesson_3;
-
 import java.util.Locale;
 
 public class Human {
-    String nane;
+      private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Human(String nane) {
-        this.nane = nane;
+        this.name = nane;
     }
 
     @Override
     public String toString() {
-        return nane != null ?nane.toUpperCase():null;
+        return name != null ?name.toUpperCase():null;
     }
 }

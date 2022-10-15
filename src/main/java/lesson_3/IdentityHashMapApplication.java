@@ -8,11 +8,11 @@ import java.util.Set;
 public class IdentityHashMapApplication {
         public static void main(String[] args) {
                 IdentityHashMap<Integer, String> ihm = new IdentityHashMap();
-                ihm.put(new Integer(1),"One");
-                ihm.put(new Integer(1),"One");
-                ihm.put(new Integer(2),"Two");
-                ihm.put(new Integer(2),"Two");
-                ihm.put(new Integer(21),"Twenty One");
+                ihm.put((1),"One");
+                ihm.put((1),"One");
+                ihm.put((2),"Two");
+                ihm.put((2),"Two");
+                ihm.put((21),"Twenty One");
 
                 System.out.println(ihm);
 
@@ -25,11 +25,11 @@ public class IdentityHashMapApplication {
                 System.out.println();
 
                 HashMap<Integer, String> hm = new HashMap();
-                hm.put(new Integer(1),"One");
-                hm.put(new Integer(1),"One");
-                hm.put(new Integer(2),"Two");
-                hm.put(new Integer(2),"Two");
-                hm.put(new Integer(21),"Twenty One");
+                hm.put((1),"One");
+                hm.put((1),"One");
+                hm.put((2),"Two");
+                hm.put((2),"Two");
+                hm.put((21),"Twenty One");
 
                 System.out.println(hm);
 
