@@ -14,11 +14,10 @@ public class Main {
         enumMap.put(Animal.DOG,"Five");
         enumMap.put(Animal.CAT,"Six");
 
-        Set set = enumMap.entrySet();
+        Set <Map.Entry<Animal, String>> entrySet = enumMap.entrySet();
 
-        for (Object o : set) {
-            Map.Entry m = (Map.Entry)o;
-            System.out.println(m.getKey()+" "+m.getValue());
+        for (Map.Entry<Animal,String> entry : entrySet) {
+             System.out.println(entry.getKey()+" "+entry.getValue());
         }
 
 
