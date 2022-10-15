@@ -1,25 +1,14 @@
 package lesson_3;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
+        HashMap<String, Integer> hm = new HashMap<>();
 
-        String[] people = new String[]{"Sean","Dave","Thomson","Joe"};
+        hm.put(null, 10);
+        hm.put(null, 100);
 
-        HashMap <String, Human> map = addHumanToMap(people);
-
-        for (Map.Entry<String, Human> pair: map.entrySet()) {
-            System.out.println(pair.getKey()+" "+pair.getValue());
-        }
-    }
-    private static HashMap<String, Human> addHumanToMap(String[] people) {
-        HashMap <String, Human> allHumans = new HashMap<>();
-
-        for (String s:people) {
-            allHumans.put(s,new Human(s));
-        }
-        return allHumans;
+        System.out.println(hm);
     }
 }
