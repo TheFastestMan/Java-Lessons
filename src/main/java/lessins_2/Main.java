@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Map<Animal, String> enumMap = new EnumMap<Animal, String>(Animal.class);
 
-        enumMap.put(Animal.HORSE,"One");
+        enumMap.put(Animal.HORSE,null); // We can have a null as a value but cannot as a key
         enumMap.put(Animal.SPIDER,"Two");
         enumMap.put(Animal.SCORPION,"Three");
         enumMap.put(Animal.FISH,"Four");
