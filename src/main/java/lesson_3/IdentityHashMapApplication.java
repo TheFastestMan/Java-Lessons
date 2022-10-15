@@ -19,7 +19,7 @@ public class IdentityHashMapApplication {
 
                 for (Object o : m) {
                         Map.Entry s = (Map.Entry) o ;
-                        System.out.println(s.getKey()+ " "+s.getValue());
+                        System.out.println(s.getKey()+ "  "+s.getValue());
                 }
 
 
