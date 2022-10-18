@@ -9,6 +9,7 @@ public class Mammals {
         this.id = id;
     }
 
+
     @Override
     public String toString() {
         return nikName +" "+ id ;
