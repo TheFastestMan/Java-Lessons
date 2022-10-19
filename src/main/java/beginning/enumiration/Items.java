@@ -18,8 +18,11 @@ public enum Items {
     }
 
     public int getPriceOfItems() {
-        System.out.println(priceOfItems);
         return priceOfItems;
     }
 
+    @Override
+    public String toString() {
+        return nameOfItems +" "+ priceOfItems;
+    }
 }

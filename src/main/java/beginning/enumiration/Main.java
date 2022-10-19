@@ -4,9 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Animal animal = Animal.CAT;
         Animal animal1 = Animal.HORSE;
-
         Items i1 = Items.APPLIANCE;
-        i1.getPriceOfItems();
+
+        System.out.println(i1.name());
+        System.out.println(i1.compareTo(Items.PROPERTY));
+        System.out.println(i1 instanceof Enum);
+        System.out.println(Items.valueOf("VEHICLE"));
 
 //        switch (animal){
 //            case CAT -> System.out.println("It is a CAT");
@@ -16,6 +19,14 @@ public class Main {
 //            case ELEPHANT -> System.out.println("It is a ELEPHANT");
 //            default -> System.out.println("It is not an ANIMAL");
 //        }
+
+        switch (i1){
+            case APPLIANCE:
+                System.out.println("It is the appliances");
+                break;
+            default:
+                System.out.println("There is nothing have found");
+        }
 
 
     }
