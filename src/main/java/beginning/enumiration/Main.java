@@ -5,11 +5,14 @@ public class Main {
         Animal animal = Animal.CAT;
         Animal animal1 = Animal.HORSE;
         Items i1 = Items.APPLIANCE;
+        Items i2 = Items.PROPERTY;
 
         System.out.println(i1.name());
         System.out.println(i1.compareTo(Items.PROPERTY));
         System.out.println(i1 instanceof Enum);
         System.out.println(Items.valueOf("VEHICLE"));
+        System.out.println(i1.ordinal());
+        System.out.println(i2.ordinal());
 
 //        switch (animal){
 //            case CAT -> System.out.println("It is a CAT");
