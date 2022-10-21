@@ -24,7 +24,7 @@ public class MainList {
 //            @Override
 //            public boolean check(Student s) {
 //                return s.sex!='m';
-//            }    /// ANONYMOUS CLASS
+//            }                                                       /// ANONYMOUS CLASS
 //        });
 
 
