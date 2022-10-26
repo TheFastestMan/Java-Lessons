@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding="UTF-8" ?>
+<phonebook>
+    <persom>
+        <name>Greg</name>>
+        <email>greg_dorset@gmail.com</email>>
+        <telephone>+19223456677</telephone>>
+        <web>www.inVid.com</web>>
+    </persom>>
+    <persom>>
+        <name>Bread</name>>
+        <email>bread_muller@gmail.com</email>>
+        <telephone>+1774356677</telephone>>
+        <web>www.GUnit.com</web>>
+    </persom>>
+    <persom>>
+        <name>Peter</name>>
+        <email>peter_oconer@gmail.com</email>>
+        <telephone>+1883459999</telephone>>
+        <web>www.TheFastest.com</web>>
+    </persom>>
+</phonebook>

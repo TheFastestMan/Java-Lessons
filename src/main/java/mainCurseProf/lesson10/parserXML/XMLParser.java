@@ -1,6 +1,5 @@
-package mainCurseProf.lesson10.XML;
+package mainCurseProf.lesson10.parserXML;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;

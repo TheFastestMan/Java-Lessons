@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE catalog [
+        <!ELEMENT catalog (book)*>
+        <!ELEMENT book (author|title|gener|price|publish_date|published_date)*>
+        <!ELEMENT author (#PCDATA)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT gener (#PCDATA)>
+        <!ELEMENT price (#PCDATA)>
+        <!ATTLIST price
+                currency CDATA #REQUIRED>
+        <!ELEMENT publish_date (#PCDATA)>
+        <!ELEMENT published_date (#PCDATA)>
+        ]>
+<catalog>
+    <book>
+        <author>Bruce Lee</author>
+        <title> Thinking in java 4th edition</title>
+        <gener>Comp</gener>
+        <price currency="USA">5</price>
+        <publish_date> 2018-02-02 </publish_date>
+    </book>
+    <book>
+        <author>Robert Kunilingus</author>
+        <title> Thinking about money</title>
+        <gener>Comp</gener>
+        <price currency="RUB">5</price>
+        <published_date> 2015-02-01 </published_date>
+    </book>
+</catalog>
