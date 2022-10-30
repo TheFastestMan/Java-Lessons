@@ -1,6 +1,4 @@
-package mainCurseProf.lesson14lambda;
-
-import org.w3c.dom.ls.LSOutput;
+package mainCurseProf.lesson14lambdaAndStream;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package mainCurseProf.lesson14lambda.example;
+package mainCurseProf.lesson14lambdaAndStream.example;
 
 public class Main {
     private static void fire (Object sent){

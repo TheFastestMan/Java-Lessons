@@ -1,4 +1,4 @@
-package mainCurseProf.lesson14lambda.example;
+package mainCurseProf.lesson14lambdaAndStream.example;
 
 import java.util.ArrayList;
 import java.util.List;
