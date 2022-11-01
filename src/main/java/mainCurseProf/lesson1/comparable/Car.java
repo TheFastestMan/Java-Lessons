@@ -1,6 +1,6 @@
 package mainCurseProf.lesson1.comparable;
 
-public class Car {
+public class Car implements Comparable {
     private String brand;
     private int price;
     private int speed;
@@ -44,23 +44,10 @@ public class Car {
                 '}';
     }
 
-    public void compareToPrice(Car c){
-        int comPrice = this.price - c.price;
-        System.out.println(comPrice);
 
-//        if(comSpeed<=0){
-//            return 0;
-//        }else if(comSpeed>0){
-//            return comSpeed;
-//        } else if(comPrice<=0){
-//            return 0;
-//        }else
-//            return comPrice;
 
-    }
-
-    public int compareToSpeed(Car c){
-        int comSpeed = this.speed - c.speed;
-        return comSpeed;
+    @Override
+    public int compareTo(Object o) {
+        return this.speed - ((Car)o).speed;
     }
 }

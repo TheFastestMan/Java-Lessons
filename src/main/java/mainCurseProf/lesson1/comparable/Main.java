@@ -14,10 +14,16 @@ public class Main {
         Car car4 = new Car("Tesla",5500,350);
         Car car5 = new Car("Fiat",2500,200);
 
-//        Car[] c = {car1,car2,car3,car3,car4,car5};
+        Car[] c = {car1,car2,car3,car3,car4,car5};
 
-        car1.compareToPrice(car2);
-        System.out.println(car4.compareToSpeed(car5));
+        Arrays.sort(c);
+
+        for (Car car : c) {
+            System.out.println(car);
+        }
+
+//        car1.compareToPrice(car2);
+//        System.out.println(car4.compareToSpeed(car5));
 
 
     }
