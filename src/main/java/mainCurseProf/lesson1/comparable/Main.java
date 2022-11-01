@@ -1,5 +1,10 @@
 package mainCurseProf.lesson1.comparable;
 
+import mainCurseProf.lesson8.simple_anno.A;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,8 +14,9 @@ public class Main {
         Car car4 = new Car("Tesla",5500,350);
         Car car5 = new Car("Fiat",2500,200);
 
-        car1.compareToPrice(car2);
+//        Car[] c = {car1,car2,car3,car3,car4,car5};
 
+        car1.compareToPrice(car2);
         System.out.println(car4.compareToSpeed(car5));
 
 
