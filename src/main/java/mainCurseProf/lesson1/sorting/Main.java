@@ -25,14 +25,17 @@ public class Main {
      Animal cat = new Animal("KutakBush",123);
      Animal dog = new Animal("BatakBush",432);
 
+        System.out.println(cat.getBreed());
 
-    Animal[] an = {cat,dog};
+
+        Animal[] an = {cat,dog};
 
 //    Arrays.sort(an); ClassCastException
 
      for (Animal c:an){
          System.out.println(c);
      }
+
 
 
 
