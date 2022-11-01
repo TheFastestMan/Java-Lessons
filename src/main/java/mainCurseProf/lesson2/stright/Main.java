@@ -1,4 +1,4 @@
-package mainCurseProf.lesson2;
+package mainCurseProf.lesson2.stright;
 
 import java.io.BufferedReader;
 import java.io.IOException;
