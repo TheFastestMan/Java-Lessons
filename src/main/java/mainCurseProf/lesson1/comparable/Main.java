@@ -14,6 +14,8 @@ public class Main {
         Car car4 = new Car("Tesla",5500,350);
         Car car5 = new Car("Fiat",2500,200);
 
+
+
         Car[] c = {car1,car2,car3,car3,car4,car5};
 
         Arrays.sort(c);

@@ -47,6 +47,13 @@ public class Main {
         System.out.println("Diff");
         System.out.println(difference);
 
+        Set<String> setOf = new HashSet<>();
+        setOf.add("A");
+        setOf.add("B");
+        setOf.add("C");
+
+        System.out.println(setOf);
+
 
 
 
