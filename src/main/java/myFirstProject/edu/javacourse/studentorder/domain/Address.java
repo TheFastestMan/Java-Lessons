@@ -6,6 +6,13 @@ public class Address {
     private String extension;
     private String apartment;
 
+    public Address(String street, String building, String extension, String apartment) {
+        this.street = street;
+        this.building = building;
+        this.extension = extension;
+        this.apartment = apartment;
+    }
+
     public String getStreet() {
         return street;
     }

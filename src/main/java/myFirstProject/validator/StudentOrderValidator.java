@@ -1,6 +1,5 @@
 package myFirstProject.validator;
 
-import myFirstProject.edu.javacourse.studentorder.SaveStudentOrder;
 import myFirstProject.edu.javacourse.studentorder.domain.*;
 import myFirstProject.edu.javacourse.studentorder.mail.MailSender;
 
@@ -28,12 +27,11 @@ public class StudentOrderValidator {
     }
     public void checkAll(){
             StudentOrder[] soArray = readStudentOrders();
-        for (int i = 0; i < soArray.length; i++) {
-            System.out.println();
-            checkOneOrder(soArray[i]);
+        for (StudentOrder so : soArray) {
+            checkOneOrder(so);
         }
     } public StudentOrder[] readStudentOrders(){
-        StudentOrder[] soArray = new StudentOrder[1];
+        StudentOrder[] soArray = new StudentOrder[3];
 
         for (int i = 0; i < soArray.length; i++) {
             soArray[i] = SaveStudentOrder.buildStudentOrder(i);

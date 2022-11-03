@@ -7,15 +7,14 @@ public class Person {
     private String givenName;
     private String patronymic;
     private LocalDate dateOfBirth;
-    private String postCode;
     private Address address;
 
-    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth, String postCode) {
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
         this.surName = surName;
         this.givenName = givenName;
         this.patronymic = patronymic;
         this.dateOfBirth = dateOfBirth;
-        this.postCode = postCode;
+
     }
 
     public String getSurName() {
@@ -50,14 +49,6 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getPostCode() {
-        return postCode;
-    }
-
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
-    }
-
     public Address getAddress() {
         return address;
     }
@@ -65,4 +56,6 @@ public class Person {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+
 }

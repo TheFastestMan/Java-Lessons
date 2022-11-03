@@ -1,18 +1,22 @@
 package myFirstProject.edu.javacourse.studentorder.domain;
 
-public class StudentOrder {
-   private long studentOrderID;
+import java.time.LocalDate;
+import java.util.Date;
+
+public class StudentOrder extends Adult{
+   private String marriageCertificateID;
+   private LocalDate marriageDate;
+   private String marriageOffice;
    private Adult husband;
    private Adult wife;
    private Child child;
 
-    public long getStudentOrderID() {
-        return studentOrderID;
+    public StudentOrder() {
+        super(null, null, null,null);
     }
+    //private long studentOrderID;
 
-    public void setStudentOrderID(long studentOrderID) {
-        this.studentOrderID = studentOrderID;
-    }
+
 
     public Adult getHusband() {
         return husband;
@@ -36,5 +40,29 @@ public class StudentOrder {
 
     public void setChild(Child child) {
         this.child = child;
+    }
+
+    public String getMarriageCertificateID() {
+        return marriageCertificateID;
+    }
+
+    public void setMarriageCertificateID(String marriageCertificateID) {
+        this.marriageCertificateID = marriageCertificateID;
+    }
+
+    public LocalDate getMarriageDate() {
+        return marriageDate;
+    }
+
+    public void setMarriageDate(LocalDate marriageDate) {
+        this.marriageDate = marriageDate;
+    }
+
+    public String getMarriageOffice() {
+        return marriageOffice;
+    }
+
+    public void setMarriageOffice(String marriageOffice) {
+        this.marriageOffice = marriageOffice;
     }
 }
