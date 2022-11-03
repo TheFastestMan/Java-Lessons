@@ -10,6 +10,14 @@ public class Person {
     private String postCode;
     private Address address;
 
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth, String postCode) {
+        this.surName = surName;
+        this.givenName = givenName;
+        this.patronymic = patronymic;
+        this.dateOfBirth = dateOfBirth;
+        this.postCode = postCode;
+    }
+
     public String getSurName() {
         return surName;
     }

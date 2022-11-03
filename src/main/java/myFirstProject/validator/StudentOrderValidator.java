@@ -1,11 +1,8 @@
 package myFirstProject.validator;
 
+import myFirstProject.edu.javacourse.studentorder.SaveStudentOrder;
 import myFirstProject.edu.javacourse.studentorder.domain.*;
 import myFirstProject.edu.javacourse.studentorder.mail.MailSender;
-import myFirstProject.validator.ChildrenValidator;
-import myFirstProject.validator.CityRegisterValidator;
-import myFirstProject.validator.StudentValidator;
-import myFirstProject.validator.WeddingValidator;
 
 public class StudentOrderValidator {
 
@@ -25,40 +22,36 @@ public class StudentOrderValidator {
     }
 
     public static void main(String[] args) {
-        StudentOrderValidator sv = new StudentOrderValidator();
-        sv.checkAll();
+        StudentOrderValidator sov = new StudentOrderValidator();
+
+        sov.checkAll();
     }
     public void checkAll(){
-        while (true) {
-            StudentOrder so = readStudentOrder();
-            System.out.println("Start ");
-            if (so == null){
-                break;
-            }
-            System.out.println("Finish 1 ");
+            StudentOrder[] soArray = readStudentOrders();
+        for (int i = 0; i < soArray.length; i++) {
+            System.out.println();
+            checkOneOrder(soArray[i]);
+        }
+    } public StudentOrder[] readStudentOrders(){
+        StudentOrder[] soArray = new StudentOrder[1];
+
+        for (int i = 0; i < soArray.length; i++) {
+            soArray[i] = SaveStudentOrder.buildStudentOrder(i);
+        }
+        return soArray;
+    }
+    public void checkOneOrder(StudentOrder so){
             AnswerCityRegister answerCity = checkCityRegister(so);
-            if (!answerCity.success){
-                continue;
-            }
+
             AnswerChildren answerChildren = checkChildren(so);
             AnswerStudent answerStudent = checkStudent(so);
             AnswerWedding answerWedding = checkWedding(so);
 
             sendMail(so);
-        }
-        System.out.println("Finish 2 ");
     }
-    public StudentOrder readStudentOrder(){
-        StudentOrder so = new StudentOrder();
-        return so;
-    }
+
     public AnswerCityRegister checkCityRegister(StudentOrder so){
-        CityRegisterValidator crv1 = new CityRegisterValidator();
-        crv1.hostName = "hostName1";
-        crv1.port = 123;
-        crv1.login = "login1";
-        crv1.password = "password1";
-        return crv1.checkCityRegister(so);
+        return cityRegisterVal.checkCityRegister(so);
     }
     public AnswerWedding checkWedding(StudentOrder so){
        return weddingVal.checkWedding(so);
