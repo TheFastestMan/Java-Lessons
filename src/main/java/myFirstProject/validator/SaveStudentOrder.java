@@ -35,7 +35,7 @@ public class SaveStudentOrder {
         husband.setPassportNumber(""+(100000+id));
         husband.setIssueDepartment("Police"+id);
         husband.setIssueDate(LocalDate.of(2050,12,12));
-        husband.setStudentOrderID(100000+id);
+      //  husband.setStudentOrderID(100000+id);
        
 
         //Wife
@@ -46,7 +46,7 @@ public class SaveStudentOrder {
         wife.setPassportNumber(""+(200000+id));
         wife.setIssueDepartment("Police"+id);
         wife.setIssueDate(LocalDate.of(1950,12,12));
-        husband.setStudentOrderID(200000+id);
+      //  husband.setStudentOrderID(200000+id);
 
         //Child
         Child child = new Child("Fred", "Marggared", "SanOfRick",

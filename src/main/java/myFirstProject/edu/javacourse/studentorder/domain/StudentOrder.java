@@ -3,7 +3,8 @@ package myFirstProject.edu.javacourse.studentorder.domain;
 import java.time.LocalDate;
 import java.util.Date;
 
-public class StudentOrder extends Adult{
+public class StudentOrder{
+    private long StudentOrderID;
    private String marriageCertificateID;
    private LocalDate marriageDate;
    private String marriageOffice;
@@ -11,12 +12,13 @@ public class StudentOrder extends Adult{
    private Adult wife;
    private Child child;
 
-    public StudentOrder() {
-        super(null, null, null,null);
+    public long getStudentOrderID() {
+        return StudentOrderID;
     }
-    //private long studentOrderID;
 
-
+    public void setStudentOrderID(long studentOrderID) {
+        StudentOrderID = studentOrderID;
+    }
 
     public Adult getHusband() {
         return husband;

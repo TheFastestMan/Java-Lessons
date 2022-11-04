@@ -9,16 +9,6 @@ public class Adult extends Person{
     private String issueDepartment;
     private String university;
     private String universityID;
-    private long studentOrderID;
-
-    public long getStudentOrderID() {
-        return studentOrderID;
-    }
-
-    public void setStudentOrderID(long studentOrderID) {
-        this.studentOrderID = studentOrderID;
-    }
-
 
     public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
         super(surName, givenName, patronymic, dateOfBirth);
