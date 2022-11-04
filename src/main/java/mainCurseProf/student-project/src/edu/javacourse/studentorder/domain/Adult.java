@@ -1,14 +1,19 @@
-package myFirstProject.edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.domain;
+
 
 import java.time.LocalDate;
 
-public class Adult extends Person{
+public class Adult extends Person
+{
     private String passportSeria;
     private String passportNumber;
     private LocalDate issueDate;
     private String issueDepartment;
-    private String university;
-    private String universityID;
+    private String univesity;
+    private String studentId;
+
+    public Adult() {
+    }
 
     public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
         super(surName, givenName, patronymic, dateOfBirth);
@@ -46,19 +51,19 @@ public class Adult extends Person{
         this.issueDepartment = issueDepartment;
     }
 
-    public String getUniversity() {
-        return university;
+    public String getUnivesity() {
+        return univesity;
     }
 
-    public void setUniversity(String university) {
-        this.university = university;
+    public void setUnivesity(String univesity) {
+        this.univesity = univesity;
     }
 
-    public String getUniversityID() {
-        return universityID;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setUniversityID(String universityID) {
-        this.universityID = universityID;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 }

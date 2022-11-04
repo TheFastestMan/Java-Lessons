@@ -1,7 +1,7 @@
-package myFirstProject.edu.javacourse.studentorder;
+package edu.javacourse.studentorder.exception;
 
-public class CityRegisterException extends Exception{
-
+public class CityRegisterException extends Exception
+{
     public CityRegisterException() {
     }
 

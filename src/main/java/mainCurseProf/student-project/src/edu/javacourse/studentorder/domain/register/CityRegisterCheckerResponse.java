@@ -1,8 +1,9 @@
-package myFirstProject.edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.domain.register;
 
-public class CityRegisterCheckerResponse {
+public class CityRegisterCheckerResponse
+{
     private boolean existing;
-    private boolean temporal;
+    private Boolean temporal;
 
     public boolean isExisting() {
         return existing;
@@ -12,7 +13,7 @@ public class CityRegisterCheckerResponse {
         this.existing = existing;
     }
 
-    public boolean getTemporal(boolean temporal) {
+    public Boolean getTemporal() {
         return temporal;
     }
 
