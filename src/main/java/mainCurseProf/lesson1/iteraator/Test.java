@@ -9,24 +9,19 @@ import java.util.Iterator;
 public class Test {
     public static void main(String[] args) {
 
-        Student student1 = new Student("Rail", "Raul", "Ravilov", 1);
-        Student student2 = new Student("Raul", "Rembo", "Ivanov", 12);
-        Student student3 = new Student("Diger", "Rl", "Rov", 78);
-        ArrayList<Student> arr = new ArrayList<>();
-        arr.add(student1);
-        arr.add(student2);
-        arr.add(student3);
+        Student s1 = new Student("w","w","w",123);
+        Student s2 = new Student("r","r","r",321);
+        Student s3 = new Student("o","o","o",345);
 
-        Iterator it = arr.iterator();
+        ArrayList<Student> list = new ArrayList<>();
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
 
-        while (it.hasNext()){
-            Student st =(Student) it.next();
-            int a = st.getId();
-            a = a+999;
-            System.out.println(st.getId());
-
-            //System.out.println(a);
+        Iterator <Student> iter = list.iterator();
+        while (iter.hasNext()){
+            Student s = iter.next();
+            System.out.println(s);
         }
-
     }
 }
