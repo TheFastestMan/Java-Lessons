@@ -4,25 +4,19 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
 public class Main {
     public static void main(String[] args) {
-        Dog dog = new Dog();
-        Cat cat = new Cat();
-        Human h = new Human();
-        Animal.c(h);
-    }
-}
-class Cat extends Animal{
-}
-class Animal{
-    public static void c(Human d) {
-        if (d instanceof Dog) {
-            System.out.println("Yes");
-        }
-        System.out.println("No");
+        int i1  = 232287;
+        int i2  = 332332;
+        int i3  = 9;
+        //int str =  (i1 >= i2) ? ((i1 >= i3) ? i1 : i3) : ((i2 >= i3) ? i2 : i3);
+
+//        if (i1>i2&&i1>i3){
+//            System.out.println(i1);
+//        }else if (i2>i1&&i2>i3){
+//            System.out.println(i2);
+//        }else if (i3>i1&&i3>i2){
+//            System.out.println(i3);
+//        }
+
 
     }
-}
-class Dog extends Human{
-}
-class Human{
-
 }

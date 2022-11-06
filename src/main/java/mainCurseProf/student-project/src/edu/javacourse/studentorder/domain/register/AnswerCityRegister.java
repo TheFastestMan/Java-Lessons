@@ -8,7 +8,7 @@ public class AnswerCityRegister
 {
    private List<AnswerCityRegisterItem> items;
 
-    private void addItems(AnswerCityRegisterItem item){
+    public void addItem(AnswerCityRegisterItem item){
         if (items == null){
             items = new ArrayList<>(10);
         }
