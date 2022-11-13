@@ -1,8 +1,6 @@
 package edu.javacourse.studentorder.config;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Properties;
 
 public class Config {
@@ -24,4 +22,5 @@ public class Config {
         }
         return properties.getProperty(name);
     }
+
 }
