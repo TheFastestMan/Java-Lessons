@@ -56,7 +56,7 @@ public class StudentOrder
     public void setWife(Adult wife) {
         this.wife = wife;
     }
-    public void addChildren(Child child){
+    public void addChild(Child child){
         if (children == null){
             children = new ArrayList<>(5);
         }
