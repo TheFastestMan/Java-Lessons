@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a588f16d-6290-4c07-a628-cfa9afad0648" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/SaveStudentOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/StudentOrderValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/config/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/dao/DictionaryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/dao/DictionaryDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/dao/StudentOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/dao/StudentOrderDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/Adult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/CountryArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/PassportOffice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/RegisterOffice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/Street.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/StudentOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/StudentOrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/University.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/children/AnswerChildren.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/register/AnswerCityRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/register/AnswerCityRegisterItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/register/CityRegisterResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/student/AnswerStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/domain/wedding/AnswerWedding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/exception/CityRegisterException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/exception/DaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/exception/TransportException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/mail/MailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/validator/ChildrenValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/validator/CityRegisterValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/validator/StudentValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/validator/WeddingValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/validator/register/CityRegisterChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/validator/register/FakeCityRegisterChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/validator/register/RealCityRegisterChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dao.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/SaveStudentOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/StudentOrderValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/config/Config.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/dao/DictionaryDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/dao/DictionaryDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/dao/StudentOrderDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/dao/StudentOrderDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/Address.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/Adult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/Child.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/CountryArea.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/PassportOffice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/RegisterOffice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/Street.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/StudentOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/StudentOrderStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/University.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/children/AnswerChildren.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/register/AnswerCityRegister.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/register/AnswerCityRegisterItem$CityError.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/register/AnswerCityRegisterItem$CityStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/register/AnswerCityRegisterItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/register/CityRegisterResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/student/AnswerStudent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/domain/wedding/AnswerWedding.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/exception/CityRegisterException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/exception/DaoException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/exception/TransportException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/mail/MailSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/validator/ChildrenValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/validator/CityRegisterValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/validator/StudentValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/validator/WeddingValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/validator/register/CityRegisterChecker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/validator/register/FakeCityRegisterChecker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/javacourse/studentorder/validator/register/RealCityRegisterChecker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../student-project/out/production/student-project/edu/javacourse/studentorder/dao/DictionaryDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../student-project/out/production/student-project/edu/javacourse/studentorder/dao/StudentOrderDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-project/src/dao.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../student-project/src/dao.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/SaveStudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/SaveStudentOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/dao/DictionaryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/dao/DictionaryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/dao/StudentOrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student-project/src/edu/javacourse/studentorder/dao/StudentOrderDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-project/src/student_project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../student-project/src/student_project.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-project/src/test/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HcfOtGvawwvVBS0WBDGanEqbXh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/my-app" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79376\IdeaProjects\Java-Lessons\src\main\java\mainCurseProf\edu.javacourse\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SaveStudentOrder">
+    <configuration name="SaveStudentOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.javacourse.studentorder.SaveStudentOrder" />
+      <module name="edu.javacourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.javacourse.studentorder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentOrderValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.javacourse.studentorder.StudentOrderValidator" />
+      <module name="edu.javacourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.javacourse.studentorder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SaveStudentOrder" />
+        <item itemvalue="Application.StudentOrderValidator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a588f16d-6290-4c07-a628-cfa9afad0648" name="Changes" comment="" />
+      <created>1668589267373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668589267373</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/SaveStudentOrder.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
