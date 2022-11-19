@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StudentOrderDaoImpl implements StudentOrderDao {
+public class StudentOrderDaoImpl   implements StudentOrderDao {
     ////////// dao ----> Data Access Object
 
     private static final String INSERT_ORDER =
@@ -94,14 +94,11 @@ public class StudentOrderDaoImpl implements StudentOrderDao {
                     "WHERE student_order_status = ? ORDER BY so.student_order_id LIMIT ?";
 
 
-    // TODO refactoring - make one method
+
     private Connection getConnection() throws SQLException {
-        Connection con = DriverManager.getConnection(
-                Config.getProperty(Config.DB_URL),
-                Config.getProperty(Config.DB_LOGIN),
-                Config.getProperty(Config.DB_PASSWORD));
-        return con;
+        return ConnectionBuilder.getConnection();
     }
+
 
     @Override
     public Long saveStudentOrder(StudentOrder so) throws DaoException {
