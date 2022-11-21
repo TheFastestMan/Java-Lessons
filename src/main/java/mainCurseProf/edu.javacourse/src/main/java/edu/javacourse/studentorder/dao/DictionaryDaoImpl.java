@@ -6,13 +6,21 @@ import edu.javacourse.studentorder.domain.PassportOffice;
 import edu.javacourse.studentorder.domain.RegisterOffice;
 import edu.javacourse.studentorder.domain.Street;
 import edu.javacourse.studentorder.exception.DaoException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class DictionaryDaoImpl implements DictionaryDao {
+public class DictionaryDaoImpl implements DictionaryDao
+{
+    private static final Logger logger = LoggerFactory.getLogger(DictionaryDaoImpl.class);
+
     private static final String GET_STREET = "SELECT street_code, street_name " +
             "FROM jc_street WHERE UPPER(street_name) LIKE UPPER(?)";
 
@@ -23,40 +31,42 @@ public class DictionaryDaoImpl implements DictionaryDao {
             "FROM jc_register_office WHERE r_office_area_id = ?";
 
     private static final String GET_AREA = "SELECT * " +
-            "FROM jc_country_struct WHERE area_id LIKE ? and area_id <> ?";
+            "FROM jc_country_struct WHERE  area_id like ? and area_id <> ?";
 
 
     private Connection getConnection() throws SQLException {
         return ConnectionBuilder.getConnection();
     }
 
-    public List <Street> findStreets (String pattern) throws DaoException {
+    public List<Street> findStreets(String pattern) throws DaoException {
         List<Street> result = new LinkedList<>();
 
         try (Connection con = getConnection();
-            PreparedStatement stmt = con.prepareStatement(GET_STREET)) {
+             PreparedStatement stmt = con.prepareStatement(GET_STREET)) {
 
-            stmt.setString(1,"%" + pattern + "%");
+            stmt.setString(1, "%" + pattern + "%");
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 Street str = new Street(rs.getLong("street_code"),
-                                        rs.getString("street_name"));
+                        rs.getString("street_name"));
                 result.add(str);
             }
         } catch (SQLException ex) {
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
+
         return result;
     }
 
     @Override
-    public List<PassportOffice> findPassportOffices(String areaID) throws DaoException {
+    public List<PassportOffice> findPassportOffices(String areaId) throws DaoException {
         List<PassportOffice> result = new LinkedList<>();
 
         try (Connection con = getConnection();
              PreparedStatement stmt = con.prepareStatement(GET_PASSPORT)) {
 
-            stmt.setString(1,areaID );
+            stmt.setString(1, areaId);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 PassportOffice str = new PassportOffice(
@@ -66,19 +76,21 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 result.add(str);
             }
         } catch (SQLException ex) {
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
+
         return result;
     }
 
     @Override
-    public List<RegisterOffice> findRegisterOffices(String areaID) throws DaoException {
+    public List<RegisterOffice> findRegisterOffices(String areaId) throws DaoException {
         List<RegisterOffice> result = new LinkedList<>();
 
         try (Connection con = getConnection();
              PreparedStatement stmt = con.prepareStatement(GET_REGISTER)) {
 
-            stmt.setString(1,areaID );
+            stmt.setString(1, areaId);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 RegisterOffice str = new RegisterOffice(
@@ -88,23 +100,25 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 result.add(str);
             }
         } catch (SQLException ex) {
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
+
         return result;
     }
 
     @Override
-    public List<CountryArea> findAreas(String areaID) throws DaoException {
+    public List<CountryArea> findAreas(String areaId) throws DaoException {
         List<CountryArea> result = new LinkedList<>();
 
         try (Connection con = getConnection();
              PreparedStatement stmt = con.prepareStatement(GET_AREA)) {
 
-            String param1 = buildParam(areaID);
-            String param2 = areaID;
+            String param1 = buildParam(areaId);
+            String param2 = areaId == null ? "" : areaId;
 
-            stmt.setString(1,param1);
-            stmt.setString(2,param2);
+            stmt.setString(1, param1);
+            stmt.setString(2, param2);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 CountryArea str = new CountryArea(
@@ -113,10 +127,13 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 result.add(str);
             }
         } catch (SQLException ex) {
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
+
         return result;
     }
+
     private String buildParam(String areaId) throws SQLException {
         if (areaId == null || areaId.trim().isEmpty()) {
             return "__0000000000";

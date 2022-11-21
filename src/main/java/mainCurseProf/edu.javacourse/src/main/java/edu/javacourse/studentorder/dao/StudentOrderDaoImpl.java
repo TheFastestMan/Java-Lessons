@@ -12,6 +12,8 @@ import edu.javacourse.studentorder.domain.StudentOrder;
 import edu.javacourse.studentorder.domain.StudentOrderStatus;
 import edu.javacourse.studentorder.domain.University;
 import edu.javacourse.studentorder.exception.DaoException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,8 +29,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StudentOrderDaoImpl   implements StudentOrderDao {
-    ////////// dao ----> Data Access Object
+public class StudentOrderDaoImpl implements StudentOrderDao
+{
+    private static final Logger logger = LoggerFactory.getLogger(StudentOrderDaoImpl.class);
 
     private static final String INSERT_ORDER =
             "INSERT INTO jc_student_order(" +
@@ -94,15 +97,15 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
                     "WHERE student_order_status = ? ORDER BY so.student_order_id LIMIT ?";
 
 
-
     private Connection getConnection() throws SQLException {
         return ConnectionBuilder.getConnection();
     }
 
-
     @Override
     public Long saveStudentOrder(StudentOrder so) throws DaoException {
         Long result = -1L;
+
+        logger.debug("SO:{}", so);
 
         try (Connection con = getConnection();
              PreparedStatement stmt = con.prepareStatement(INSERT_ORDER, new String[]{"student_order_id"})) {
@@ -139,6 +142,7 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
             }
 
         } catch (SQLException ex) {
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
 
@@ -194,9 +198,8 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
 
     @Override
     public List<StudentOrder> getStudentOrders() throws DaoException {
-         return getStudentOrdersOneSelect();
-         //return getStudentOrdersTwoSelect();
-
+        return getStudentOrdersOneSelect();
+//        return getStudentOrdersTwoSelect();
     }
 
     private List<StudentOrder> getStudentOrdersOneSelect() throws DaoException {
@@ -213,7 +216,7 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
 
             ResultSet rs = stmt.executeQuery();
             int counter = 0;
-            while (rs.next()) {
+            while(rs.next()) {
                 Long soId = rs.getLong("student_order_id");
                 if (!maps.containsKey(soId)) {
                     StudentOrder so = getFullStudentOrder(rs);
@@ -225,12 +228,13 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
                 so.addChild(fillChild(rs));
                 counter++;
             }
-            if(counter >= limit){
-                result.remove(result.size()-1);
+            if (counter >= limit) {
+                result.remove(result.size() - 1);
             }
 
             rs.close();
-        } catch (SQLException ex) {
+        } catch(SQLException ex) {
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
 
@@ -244,9 +248,9 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
              PreparedStatement stmt = con.prepareStatement(SELECT_ORDERS)) {
 
             stmt.setInt(1, StudentOrderStatus.START.ordinal());
-            stmt.setInt(2,Integer.parseInt(Config.getProperty(Config.DB_LIMIT)));
+            stmt.setInt(2, Integer.parseInt(Config.getProperty(Config.DB_LIMIT)));
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
+            while(rs.next()) {
                 StudentOrder so = getFullStudentOrder(rs);
 
                 result.add(so);
@@ -254,7 +258,8 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
             findChildren(con, result);
 
             rs.close();
-        } catch (SQLException ex) {
+        } catch(SQLException ex) {
+            logger.error(ex.getMessage(), ex);
             throw new DaoException(ex);
         }
 
@@ -329,7 +334,7 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
 
         try (PreparedStatement stmt = con.prepareStatement(SELECT_CHILD + cl)) {
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
+            while(rs.next()) {
                 Child ch = fillChild(rs);
                 StudentOrder so = maps.get(rs.getLong("student_order_id"));
                 so.addChild(ch);
@@ -343,7 +348,7 @@ public class StudentOrderDaoImpl   implements StudentOrderDao {
         String patronymic = rs.getString("c_patronymic");
         LocalDate dateOfBirth = rs.getDate("c_date_of_birth").toLocalDate();
 
-        Child child = new Child(surName, givenName, patronymic, dateOfBirth);
+        Child child = new Child(surName,givenName, patronymic, dateOfBirth);
 
         child.setCertificateNumber(rs.getString("c_certificate_number"));
         child.setIssueDate(rs.getDate("c_certificate_date").toLocalDate());
