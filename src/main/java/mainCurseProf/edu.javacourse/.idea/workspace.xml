@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a588f16d-6290-4c07-a628-cfa9afad0648" name="Changes" comment="Lesson 71 unit-tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/TestStreams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/bands.txt" afterDir="false" />
+    <list default="true" id="a588f16d-6290-4c07-a628-cfa9afad0648" name="Changes" comment="Stream 15 exmpl">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/test/Lambdas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/test/Printable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/javacourse/studentorder/TestStreams.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +19,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,13 +70,13 @@
       <recent name="edu.javacourse.studentorder.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IntSrteamSimp">
+  <component name="RunManager" selected="Application.Lambdas">
     <configuration name="IntSrteamSimp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.javacourse.studentorder.IntSrteamSimp" />
       <module name="edu.javacourse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.javacourse.studentorder.*" />
+          <option name="PATTERN" value="edu.javacourse.studentorder.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,7 +89,7 @@
       <module name="edu.javacourse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.javacourse.studentorder.*" />
+          <option name="PATTERN" value="edu.javacourse.studentorder.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntWithSkip" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.javacourse.studentorder.IntWithSkip" />
+    <configuration name="Lambdas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.javacourse.studentorder.test.Lambdas" />
       <module name="edu.javacourse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.javacourse.studentorder.*" />
+          <option name="PATTERN" value="edu.javacourse.studentorder.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,7 +115,7 @@
       <module name="edu.javacourse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.javacourse.studentorder.*" />
+          <option name="PATTERN" value="edu.javacourse.studentorder.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,7 +128,7 @@
       <module name="edu.javacourse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.javacourse.studentorder.*" />
+          <option name="PATTERN" value="edu.javacourse.studentorder.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Lambdas" />
         <item itemvalue="Application.IntSrteamSimp" />
         <item itemvalue="Application.StreamSortedFindFirst" />
         <item itemvalue="Application.Str" />
         <item itemvalue="Application.IntStreanSum" />
-        <item itemvalue="Application.IntWithSkip" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669052914923</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Stream 15 exmpl">
+      <created>1669125658201</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669125658202</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +208,8 @@
     <MESSAGE value="Lesson 65 maven" />
     <MESSAGE value="Lesson 70 unit-tests" />
     <MESSAGE value="Lesson 71 unit-tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 71 unit-tests" />
+    <MESSAGE value="Stream 15 exmpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stream 15 exmpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
